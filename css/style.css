@@ -12,15 +12,19 @@ body{
 	width: 100%;
 	display: inline-block;
 	background: black;
-	padding: 25px;
+	padding: 50px;
 }
 
 h1{
 	letter-spacing: 2px;
 	font-size: 45px;
 	color: rgb(150, 0, 0);
-	margin-top: 80px;
+	margin-top: 15px;
 	text-align:center;
+}
+
+.banner img{
+	width: 100%;
 }
 
 .texto-banner {
@@ -30,12 +34,24 @@ h1{
 	display:inline-block ;
 	padding: 0;
 	background-color: bisque;
+	
 }
 
 h2 {
 	font-size: 20px;
-	text-align: center;
 	letter-spacing: 1px;
+	
+	animation-name: mover;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes mover {
+	100% {transform:translateX(100%);}
+	
+	
+	
+
 }
 
 .ultimos-lanzamientos {
@@ -90,9 +106,9 @@ h3 {
 	list-style: none;
 }
 
-.img{
+/* .img{
 	justify-content:center;
-}
+} */
 
 h4{
 	display: inline-block;
@@ -141,7 +157,8 @@ footer{
     display: flex;
     flex-direction: column;
     padding: 10px;
-	margin-top: 100px;
+	margin-top: 50px;
+	border-top: 2px solid black;
 }
 
 .box__footer .logo img{
@@ -194,6 +211,35 @@ footer{
 } 
 
 
+/* GRID */
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-auto-rows: minmax(250px, auto) ;
+	gap: 30px;
+	padding: 20px;
+	grid-auto-flow: dense;
+}
+
+.grid-item:hover{
+	filter: opacity(0.9);
+	transform: scale(1.04);
+
+}
+
+.grid-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+
+  	background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+}
+
 /*.icons {
 	display: flex;
 	position: sticky;
@@ -224,7 +270,33 @@ footer{
 
 }*/
 
+@media screen and (max-width: 1280px){
 
+}
+
+@media screen and (max-width: 1100px){
+
+	.nav-ul{
+		flex-direction: column;
+	}
+	.titulo{
+		background-size:cover;
+	
+	}
+	.banner{
+		background-image: cover;
+
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
+
+}
 
 
 
