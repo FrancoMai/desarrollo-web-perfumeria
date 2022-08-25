@@ -69,7 +69,7 @@ h3 {
 }
 
 
-.navegador {
+/* .navegador {
 	position: fixed;
 	width: 100%;
 	display: flex;
@@ -104,11 +104,16 @@ h3 {
 
 .nav-li{
 	list-style: none;
+} */
+
+.navbarSupportedContent{
+	display:flex ;
+	justify-content: space-around;
 }
 
-/* .img{
+.img{
 	justify-content:center;
-} */
+} 
 
 h4{
 	display: inline-block;
@@ -128,7 +133,7 @@ i{
 	margin: 20px;
 	padding: 10px;
 	font-size: 30px;
-}
+} 
 
 footer{
     width: 100%;
