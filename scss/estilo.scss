@@ -1,8 +1,11 @@
+*{	box-sizing: border-box};
+
+
 @import "variables";
+@import "maps";
+@import "extend";
+@import "mixin";
 
-
-* {	box-sizing: border-box;
-}
 
 body{
 	margin: 0;
@@ -12,7 +15,7 @@ body{
 
 .titulo {
     
-	width: 100%;
+	@include porcentaje;
 	display: inline-block;
 	background: $color2;
 	padding: 50px;
@@ -20,7 +23,7 @@ body{
     h1{
 	letter-spacing: 2px;
 	font-size: 45px;
-	color: rgb(150, 0, 0);
+	color: rgb(144, 6, 6);
 	margin-top: 20px;
 	text-align:center;
     }
@@ -30,17 +33,17 @@ body{
 .texto-banner {
 	margin-top: 5px;
 	margin-bottom: 5px;
-	width: 100%;
+	@include porcentaje;
 	display:inline-block ;
 	padding: 0;
-	background-color: bisque;       
+	background-color: rgb(255, 243, 229);       
 
     h2 {
 	font-size: 20px;
 	letter-spacing: 1px;
 	
 	animation-name: mover;
-	animation-duration: 5s;
+	animation-duration: 5.5s;
 	animation-iteration-count: infinite;
     }
     
@@ -53,7 +56,7 @@ body{
 
 .ultimos-lanzamientos {
 display:inline-block;
-width: 100%;
+@include porcentaje;
 margin-top: 100px;
 
 
@@ -88,14 +91,14 @@ margin-top: 100px;
         }
     
         .grid-item{
-        display: flex;
+        display: map-get($position, display);
         align-items: center;
-        justify-content: center;
+        justify-content: map-get($position, content);
         border-radius: 4px;
         transition: transform 0.3s ease-in-out;
         background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
+        background-position: map-get($position, background-position);
+        background-repeat: no-repeat;
         }
     
         .imgclass{
@@ -144,20 +147,20 @@ footer{
     .box__footer .terms{
     max-width: 350px;
     font-weight: 500;
-    color: #000000;
+    color: $color2;
     font-size: 19px;
     }
 
     .box__footer h4{
     margin-bottom: 0px;
-    color: #000000;
+    color: $color2;
     font-weight: 500;
 	font-size: 30px;
     }
 
     .box__footer a{
     margin-top: 10px;
-    color: #000000;
+    color: $color2;
     font-weight: 600;
     }
 

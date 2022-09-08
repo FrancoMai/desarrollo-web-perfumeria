@@ -16,7 +16,7 @@ body {
 .titulo h1 {
   letter-spacing: 2px;
   font-size: 45px;
-  color: rgb(150, 0, 0);
+  color: rgb(144, 6, 6);
   margin-top: 20px;
   text-align: center;
 }
@@ -27,15 +27,15 @@ body {
   width: 100%;
   display: inline-block;
   padding: 0;
-  background-color: bisque;
+  background-color: rgb(255, 243, 229);
 }
 .texto-banner h2 {
   font-size: 20px;
   letter-spacing: 1px;
   -webkit-animation-name: mover;
           animation-name: mover;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-duration: 5.5s;
+          animation-duration: 5.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
@@ -124,18 +124,18 @@ footer .box__footer .logo img {
 footer .box__footer .terms {
   max-width: 350px;
   font-weight: 500;
-  color: #000000;
+  color: black;
   font-size: 19px;
 }
 footer .box__footer h4 {
   margin-bottom: 0px;
-  color: #000000;
+  color: black;
   font-weight: 500;
   font-size: 30px;
 }
 footer .box__footer a {
   margin-top: 10px;
-  color: #000000;
+  color: black;
   font-weight: 600;
 }
 footer .box__footer a:hover {
